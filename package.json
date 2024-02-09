@@ -1,0 +1,19 @@
+{
+  "name": "serein-eslint",
+  "version": "1.0.0",
+  "description": "ESLint support for projects created by Serein.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SereinMC/ESLint.git"
+  },
+  "author": "Lampese",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/SereinMC/ESLint/issues"
+  },
+  "homepage": "https://github.com/SereinMC/ESLint#readme"
+}

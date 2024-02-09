@@ -13,16 +13,15 @@ const ts = {
 		'@typescript-eslint/ban-ts-comment': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		'no-non-null-assertion': 'off'
+	},
+	parserOptions: {
+		tsconfigRootDir: './'
 	}
 };
 
 const js = {
 	root: true,
-	// This tells ESLint to load the config from the package `eslint-config-minecraft-scripting`
-	extends: ['minecraft-scripting'],
-	parserOptions: {
-		tsconfigRootDir: __dirname
-	}
+	extends: ['minecraft-scripting']
 };
 
 async function setup({ InfoHandler, NpmHandler, IO }) {
@@ -48,13 +47,13 @@ async function setup({ InfoHandler, NpmHandler, IO }) {
 
 	package_['scripts']['lint'] = 'eslint . --ext .ts';
 
-	IO.writeJSON(package_, 'package.json');
+	IO.writeJSON('package.json', package_);
 
 	console.log('[done] setup eslint.');
 }
 
 export default async function (program, handlers) {
-	InfoHandler.bind('ext');
+	handlers.InfoHandler.bind('ext');
 	program
 		.command('eslint-setup')
 		.alias('ess')

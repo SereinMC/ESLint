@@ -1,6 +1,7 @@
 {
   "name": "serein-eslint",
-  "version": "1.0.0",
+  "version": "1.0.4",
+  "type": "module",
   "description": "ESLint support for projects created by Serein.",
   "main": "index.js",
   "scripts": {
